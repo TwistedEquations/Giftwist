@@ -1,0 +1,74 @@
+<link href="/components/bower_components/paper-shadow/paper-shadow.html" rel="import">
+<link href="/components/bower_components/paper-ripple/paper-ripple.html" rel="import">
+<link href='/components/components/twist-fonts/twist-fonts.html' rel='import'>
+<polymer-element name="twist-gif-card" attributes="gif video thumbnail">
+
+<template>
+	<style type="text/css">
+	:host .gif-card{
+		width: 98%;
+		background: #ffffff;
+		font-family: "roboto";
+		margin: 1%;
+	}
+	:host .gif-card img{ 
+		width: 96%;
+		margin: 2%;
+	}
+	:host .ripple {
+		color: #355aa6;
+	}
+	:host .button {
+		padding: 15px;
+		text-align: center;
+		font-size: 1.1em;
+		color: #444444;
+		text-transform: uppercase;
+		font-weight: 100;
+	}
+	:host .button:hover {
+		background: #e5e5e5;
+	}
+	:host .divider-vert {
+		width:1px;
+		background: #e5e5e5;
+	}
+	:host .divider-hor {
+		height:1px;
+		width: 100%;
+		background: #e5e5e5;
+	}
+
+	@media (max-width: 480px) {
+	  	:host .gif-card {
+			width: 98%;
+		}
+	}
+
+	</style>
+
+	<div class="gif-card" relative>
+	<paper-shadow z="1"></paper-shadow>
+		<img src="{{thumbnail}}">
+
+		<div class="divider-hor"></div>
+
+		<div horizontal layout>
+			<div relative flex class="button" >Gif {{gif}}<paper-ripple fit class="ripple"></paper-ripple>
+			</div>
+
+			<div class="divider-vert"></div>
+
+			<div relative flex class="button">Video {{video}}<paper-ripple fit class="ripple"></paper-ripple>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script type="text/javascript">Polymer("twist-gif-card", {
+	ready : function() {
+		console.log(this.gif);
+	}
+});</script>
+
+</polymer-element>

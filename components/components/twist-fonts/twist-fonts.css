@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'sketch_blockbold';
+    src: url('sketch_block.eot');
+    src: url('sketch_block.eot?#iefix') format('embedded-opentype'),
+         url('sketch_block.woff') format('woff'),
+         url('sketch_block.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('Roboto-Light.ttf');
+}

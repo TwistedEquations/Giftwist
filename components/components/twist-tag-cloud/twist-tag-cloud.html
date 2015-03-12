@@ -1,0 +1,62 @@
+<link rel="import" href="/components/components/twist-fonts/twist-fonts.html">
+<link href="/components/bower_components/paper-shadow/paper-shadow.html" rel="import">
+<link href="/components/bower_components/paper-ripple/paper-ripple.html" rel="import">
+
+<polymer-element name="twist-tag-cloud" noscript>
+<template>
+	<style type="text/css">	
+	 .tag {
+	 	color: #444444;
+        text-transform: uppercase;
+        font-weight: 100;
+        position: relative;
+        font-size: 16px;
+        padding: 10px;
+        margin: 5px;
+        min-width: 55px;
+        text-align: center;
+        display: inline-block;
+	 }
+	 .tag:hover {
+	 	background: #e5e5e5;
+	 }
+	 #wrapper {
+	 	width: 98%;
+		background: #ffffff;
+		font-family: "roboto";
+		margin: 1%;
+		position: relative;
+	 }
+	 :host .ripple {
+		color: #355aa6;
+	}
+	</style>
+
+	<div id="wrapper">
+	<paper-shadow z="1"></paper-shadow>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Funny</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fit</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fail</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fit</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fail</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fit</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fail</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fit</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fail</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Gaming</div>
+		<div class="tag"><paper-ripple fit class="ripple"></paper-ripple>Fail</div>
+	</div>
+</template>
+</polymer-element>

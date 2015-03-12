@@ -1,0 +1,78 @@
+<link href="/components/bower_components/core-toolbar/core-toolbar.html" rel="import">
+<link href="/components/bower_components/paper-shadow/paper-shadow.html" rel="import">
+<link href="/components/bower_components/paper-ripple/paper-ripple.html" rel="import">
+<link rel="import" href="/components/components/twist-fonts/twist-fonts.html">
+
+<polymer-element name="twist-action-bar">
+
+ <template>
+        <style>
+            :host h1 {
+                font-family: "sketch_blockbold";
+                color: #cccccc;
+                font-size: 1.6em;
+            }
+            :host core-toolbar {
+            	background: #355aa6;
+                padding: 0;
+            }
+            :host div{
+            	width: 100%;
+            	height: 100%;
+            	margin: 0;
+            }
+            :host .upload {
+                text-align: center;
+                font-size: 1.1em;
+                color: #cccccc;
+                text-transform: uppercase;
+                font-weight: 100;
+                font-family: "roboto";
+                padding: 15px;
+                position: relative;
+                margin: 0;
+            }
+            :host .title {
+                position: relative;
+                padding: 10px;
+                text-align: center;
+            }
+            :host .title:hover {
+                background-color: rgba(229,229,229, 0.2);
+                cursor: pointer;
+            }
+            :host .upload:hover {
+            	background-color: #FFFFFF;
+                background-color: rgba(229,229,229, 0.2);
+            	cursor: pointer;
+            }
+        </style>
+		
+        <core-toolbar>
+	        <div layout vertical center>
+	        	<paper-shadow z="2"></paper-shadow>
+
+	        	<div layout horizontal center>
+	        		<h1 class="title" id="title">Gif Twist<paper-ripple fit class="ripple"></paper-ripple></h1>
+
+	        		<div flex></div>
+
+	        		<p class="upload" id="upload">Upload
+	        		     <paper-ripple fit class="ripple"></paper-ripple>
+                    </p>
+	        	</div>
+		    </div>
+        </core-toolbar>
+    </template>
+
+    <script type="text/javascript">Polymer("twist-action-bar", {
+        ready:function() {
+            this.$.upload.addEventListener("click",function() {
+                window.location = "/upload";
+            });
+            this.$.title.addEventListener("click",function() {
+                window.location = "/";
+            });
+        }
+    });</script>
+</polymer-element>

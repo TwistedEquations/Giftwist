@@ -1,0 +1,62 @@
+<link href="/components/components/twist-gif-card/twist-gif-card.html" rel="import">
+<link href="/components/bower_components/core-ajax/core-ajax.html" rel="import">
+
+<polymer-element name="twist-gif-grid">
+<template>
+	<style type="text/css">
+	</style>
+	<core-ajax id="gifAjax"
+	    url="/api/gifs"
+	    handleAs="json"
+	    on-core-response="{{handleResponse}}"></core-ajax>
+
+	<div layout horizontal>
+		<div flex>
+		    <template repeat="{{gif in gifsLeft}}">
+		    	<twist-gif-card flex gif="{{gif.gifSize}}" video="{{gif.videoSize}}" thumbnail="{{gif.id}}"> </twist-gif-card>
+		    </template>
+	    </div>
+		<div flex>
+		    <template repeat="{{gif in gifsMiddle}}">
+		    	<twist-gif-card flex gif="{{gif.gifSize}}" video="{{gif.videoSize}}" thumbnail="{{gif.id}}"> </twist-gif-card>
+		    </template>
+	    </div>
+	    <div flex>
+		    <template repeat="{{gif in gifsRight}}">
+		    	<twist-gif-card flex gif="{{gif.gifSize}}" video="{{gif.videoSize}}" thumbnail="{{gif.id}}"> </twist-gif-card>
+		    </template>
+	    </div>
+	</div>
+</template>
+
+<script type="text/javascript">Polymer("twist-gif-grid", {
+
+	ready: function() {
+		
+		this.handleResponse = function(element) {
+			this.gifs = this.$.gifAjax.response;
+			this.gifsMiddle = [];
+			this.gifsRight = [];
+			this.gifsLeft = [];
+
+			for(var i =0 ; i < this.gifs.length ; i++) {
+				console.log(this.gifs[i]);
+
+				if(i % 3 == 0) {
+					this.gifsLeft.push(this.gifs[i]);
+				}
+				else if(i % 2 ==0) {
+					this.gifsRight.push(this.gifs[i]);
+				}
+				else {
+					this.gifsMiddle.push(this.gifs[i]);
+				}
+			}
+		};
+
+		this.$.gifAjax.go();
+		
+	}
+});</script>
+
+</polymer-element>

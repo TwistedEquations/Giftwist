@@ -1,0 +1,21 @@
+{
+  "name": "giftwist",
+  "version": "\\0.0.1",
+  "authors": [
+    "Patrick Doyle <patrick@twsitedequations.com>"
+  ],
+  "description": "App to convert gif to videos",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-elements": "Polymer/core-elements#~0.3.5",
+    "paper-elements": "Polymer/paper-elements#~0.3.5"
+  }
+}

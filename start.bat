@@ -1,0 +1,1 @@
+cmd /k nodemon C:\Development\Node\Projects\GifTwist\app.js

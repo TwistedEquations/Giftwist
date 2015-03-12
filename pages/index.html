@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Gif Twist</title>	
+
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<script src="/components/bower_components/platform/platform.js"></script>
+		<link rel="import" href="/components/bower_components/polymer/polymer.html">
+
+		<link rel="import" href="/components/bower_components/paper-ripple/paper-ripple.html">
+		<link rel="import" href="/components/components/twist-action-bar/twist-action-bar.html">
+		<link rel="import" href="/components/components/twist-gif-grid/twist-gif-grid.html">
+		<link rel="import" href="/components/components/twist-tag-cloud/twist-tag-cloud.html">
+		<style type="text/css">
+		body {
+			margin:0;
+			background: #e5e5e5;
+		}
+		</style>
+	</head>
+	<body unresolved touch-action="auto">
+	    <twist-action-bar>
+		</twist-action-bar>
+		<div layout horizontal>
+			<div flex one>
+			<twist-tag-cloud></twist-tag-cloud>
+			</div>
+			  <twist-gif-grid main flex four></twist-gif-grid>
+		</div>
+		
+	</body>
+</html>
